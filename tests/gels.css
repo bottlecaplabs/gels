@@ -1,0 +1,34 @@
+#parent {
+  background:#3da;
+  width:400px;
+  height:200px;
+}
+#parent2 {
+  background:#3ad;
+  width:400px;
+  height:600px;
+}
+#child {
+  background:#80f;
+  width:200px;
+  margin:100px;
+  height:200px;
+}
+#child2 {
+  background:#808;
+  width:200px;
+  margin:100px;
+  height:200px;
+}
+#nested {
+  background:#7f7;
+  width:100px;
+  margin:50px;
+  height:100px;
+}
+#child3 {
+  background:#880;
+  width:200px;
+  margin:100px;
+  height:200px;
+}
