@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+
+  <head>
+
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  	<title>Bottlecap Labs: Gels</title>
+
+  	<meta name="generator" content="TextMate http://macromates.com/">
+  	<meta name="author" content="Bottlecap Labs">
+  	<!-- Date: 2008-05-02 -->
+	
+  	<link href="stylesheets/master.css" media="screen, print" rel="Stylesheet" type="text/css" />
+  	<link href="stylesheets/screen.css" media="screen" rel="Stylesheet" type="text/css" />
+  	<link href="stylesheets/print.css" media="print" rel="Stylesheet" type="text/css" />
+
+  </head>
+
+  <body>
+    
+    <div class="container showgrid">
+      
+      <div class="prepend-1 span-12">
+
+        <h1>Gels</h1>
+
+        <h2>div.blue > div.yellow = div.green</h2>
+
+        <div class="span-6 append-6">
+          <div class="blue inset">div.blue</div>
+          <br />
+          <div class="yellow inset">div.yellow</div>
+          <br />
+          <div class="blue inset">
+            <div class="yellow inset">
+              div.blue > div.yellow = div.yellow
+            </div>
+          </div>
+        </div>
+
+        <br />
+          
+        <h2>ul li.blue ul li.yellow = li.green</h2>
+
+        <ul>
+          <li class="blue prepend-1">
+            blue
+            <ul>
+              <li class="yellow prepend-1">
+                <!-- blue + yellow = green -->
+                green
+              </li>
+            </ul>
+          </li>
+        </ul>
+        
+        <table summary="Sample gel 1"  border="0" cellspacing="0" cellpadding="0">
+          <tr class="span-2 blue">
+            <td class="span-1">tr.blue td.transparent</td>
+            <td class="span-1">tr.blue td.blue</td>
+            <td class="span-1">tr.blue td.</td>
+          </tr>
+          <tr class="span-2 blue">
+            <td>tr.blue td</td>
+            <td class="span-1 yellow">td.yellow</td>
+          </tr>
+          <tr class="span-2 blue">
+            <td></td>
+            <td></td>
+            <td class="span-1 yellow">td.blue.yellow = td.green</td>
+          </tr>
+        </table>
+
+      </div>
+      
+    </div>
+
+  </body>
+
+</html>
