@@ -10,18 +10,18 @@
 }
 #child {
   background:#80f;
-  width:200px;
-  margin:100px;
-  height:200px;
+  width:100px;
+  margin:50px;
+  height:80px;
 }
 #child2 {
-  background:#808;
+  background:#8f0;
   width:200px;
   margin:50px;
   height:200px;
 }
 #nested {
-  background:#7f7;
+  background:#f77;
   width:100px;
   margin:50px;
   height:100px;
