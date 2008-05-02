@@ -8,14 +8,29 @@
     });
   };
   function gelify(el) {
+    var classes = $(el).attr("class").split(' ');
+    var gel = null;
+    var percent = 0.5;
+    for (var i = classes.length - 1; i >= 0; i--){
+      if (classes[i].match(/^gel/)) {
+        var percent = (parseInt(classes[i].split('-').pop()) / 100.0);
+        break;
+      }
+    };
+    
     var original = getColor(el, "backgroundColor");
     var pcolor = getColor($(el).parent(), "backgroundColor");
-    var newcolor = blendColor(original, pcolor, 0.5);
+    
+    if (!$(el).attr("title")) {
+      $(el).attr("title","gel at "+percent);
+    }
+    
+    var newcolor = blendColor(original, pcolor, percent);    
     var attcolor = "rgb(" + newcolor.join(",") + ")"; 
     $(el).css({'backgroundColor':attcolor});
   };
   $.gel = function() {
-    $("[class^=gel]").gels();
+    $("[class*=gel]").gels();
   };
   
   function blendColor(originColor,maskRGB,opacityPercent) {
