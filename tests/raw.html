@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+	<head>
+		<title></title>
+		<script src="../javascript/jquery.js" type="text/javascript"></script>
+
+		<script>
+			// opacityPercent ranges from 0.0-1.0
+			function setColorHue(originColor,opacityPercent,maskRGB) {
+				returnColor=new Array();
+				for(w=0;w<originColor.length;w++) returnColor[w] = Math.round(originColor[w]*opacityPercent) + Math.round(maskRGB[w]*(1.0-opacityPercent));
+				return returnColor;
+			}
+			
+			function longHexToDec(longHex) {
+				r=toDec(longHex.substring(0,2));
+				g=toDec(longHex.substring(2,4));
+				b=toDec(longHex.substring(4,6));
+				return new Array(r,g,b);
+			}
+			
+			function toHex(dec) {
+				hex=dec.toString(16);
+				if(hex.length==1)hex="0"+hex;
+				if(hex==100)hex="FF";
+				return hex.toUpperCase();
+			}
+			
+			function toDec(hex) {
+				return parseInt(hex,16);
+			}
+			
+			function gelize(selector1, selector2, selector3, percent){
+				color1 = longHexToDec($(selector1).css("background-color"));
+				color2 = longHexToDec($(selector2).css("background-color"));
+
+				newColor = setColorHue(color1, percent, color2);
+				$(selector3).css("background-color", newColor);
+			}
+		</script>
+		<style>
+			#one {
+				background-color: #ef11dd;
+			}
+				#two {
+				background-color: #ffffff;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="one">
+			one
+		</div>
+	
+		<div id="two">
+			two
+			</div>
+			
+			<div id="mix">
+				mix
+				</end>
+	</body>
+</html>
