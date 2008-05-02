@@ -16,7 +16,7 @@
       var p = $(this).css("background-color");
       if (p == "transparent") return;
       console.log(this);
-      console.log('p:'+p);
+      console.log(p);
     });
     // console.log(parent);
     // $(el).css({'background-color':'#afa'});
