@@ -6,7 +6,7 @@
       gelify(this);
     });
   };
-  function gelify() {
-    
+  function gelify(el) {
+    console.log(el)
   };
 })(jQuery);
