@@ -1,6 +1,11 @@
 #parent {
   background:#afa;
+  width:400px;
+  height:400px;
 }
 #child {
   background:#f80;
+  width:200px;
+  margin:100px;
+  height:200px;
 }
