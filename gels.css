@@ -1,10 +1,10 @@
 #parent {
-  background:#afa;
+  background:#3da;
   width:400px;
   height:400px;
 }
 #child {
-  background:#f80;
+  background:#80f;
   width:200px;
   margin:100px;
   height:200px;
