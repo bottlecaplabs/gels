@@ -1,0 +1,8 @@
+@import "ie.css";
+
+.inset   { padding: 5px; margin: 5px; }
+.offset  { padding: 5px; margin: 5px -5px -5px 5px; }
+.red     { background-color: #f00; }
+.green   { background-color: #0f0; }
+.blue    { background-color: #00f; }
+.yellow  { background-color: #ff0; }

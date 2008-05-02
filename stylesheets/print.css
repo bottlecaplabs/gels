@@ -1,0 +1,5 @@
+@import "blueprint/blueprint/print.css";
+
+.foo {
+   color: green;
+}
